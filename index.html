@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AirBirds Dataset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  
+  <style>
+    table {
+      width: 100%;
+    }
+    .styled-table {    
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    }
+    .styled-table th,
+    .styled-table td {
+        width:12.5%;
+        padding: 12px 15px;
+    }
+    .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    }
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="page-header" style="backgroundImage:url('images/background.png');background-size: 100% 100%;">
+    <h1 class="project-name">AirBirds<h1>
+        <h2 class="project-tagline">A Large-scale Challenging Dataset for Bird Strike Prevention in Real-world Airports
+        </h2>
+  </section>
+
+  <section class="main-content">
+    <h1>
+      <a id="listen-1" class="anchor" href="#listen-1" aria-hidden="true"><span aria-hidden="true"
+          class="octicon octicon-link"></span></a>Introduction
+    </h1>
+    <p style="text-align: justify;text-indent: 2ch;">One fundamental limitation to the research of bird strike
+      prevention is the lack of a large-scale dataset taken
+      directly from real-world airports. Existing relevant datasets are either small in size or not dedicated for this
+      purpose. To advance the research and practical solutions for bird strike prevention, we present a
+      large-scale challenging dataset AirBirds that consists of 118,312 time-series images, where a total of 409,967
+      bounding boxes of flying birds are manually, carefully annotated. The average size of all annotated instances is
+      smaller than 10 pixels in 1920x1080 images. Images in the dataset are captured over 4 seasons of a whole
+      year by a network of cameras deployed at a real-world airport, covering diverse bird species, lighting conditions
+      and weather scenarios. To the best of our knowledge, it is the first large-scale image dataset that collects
+      flying birds in real-world airports for bird strike prevention. Since the detection module is a crucial component
+      of the strike prevention system, we also investigate the performances of existing representative detectors on
+      AirBirds. The results show that their performances are surprisingly unsatisfactory and the reasons are analyzed in
+      detail. Due to special data distribution, AirBirds can also serve as a challenging benchmark for tiny object
+      detection.</p>    
+    <p align="center"> <iframe width="830" height="450" src="https://www.youtube.com/embed/TSS_bOM8uSY" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        style="max-width: 100%"></iframe>
+    </p>
+    <p style="text-align: justify;text-indent: 2ch;">
+      In addition, we develop a vision-based system to detect flying birds in a real-world airport. The above video 
+      demonstrates this case. 
+      Subsequent measures of bird repelling are triggered automatically once targets are discovered in the specified areas.
+    </p>
+
+    <h2>
+      <a id="download" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true"
+          class="octicon octicon-link"></span></a>Download
+    </h2>
+    <p style="text-align: justify;text-indent: 2ch;">
+      The totoal size of all compressed files in AirBirds is about 165GB, it is necessary to split the dataset into multiple chunks, 
+      as the following table summarizes. The training set includes images0.zip, ..., images9.zip and corresponding labels0.zip, ..., labels9.zip,
+      remaining images10.zip and images11.zip are in the test set. Their download links will be added later.
+    </p>
+    
+      <table class="styled-table">
+      <thead>
+          <tr>
+              <th>Chunk</th>
+              <th>Images</th>
+              <th>Labels</th>
+              <th>Size</th>
+              <th>Chunk</th>
+              <th>Images</th>
+              <th>Labels</th>
+              <th>Size</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>0</td>
+              <td>images0.zip</td>
+              <td>labels0.zip</td>
+              <td>13GB</td>
+              <td>1</td>
+              <td>images1.zip</td>
+              <td>labels1.zip</td>
+              <td>13GB</td>
+          </tr>
+          <tr>
+            <td>2</td>
+              <td>images2.zip</td>
+              <td>labels2.zip</td>
+              <td>13GB</td>
+              <td>3</td>
+              <td>images3.zip</td>
+              <td>labels3.zip</td>
+              <td>12GB</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>images4.zip</td>
+              <td>labels4.zip</td>
+              <td>14GB</td>
+              <td>5</td>
+              <td>images5.zip</td>
+              <td>labels5.zip</td>
+              <td>13GB</td>
+          </tr>
+          <tr>
+              <td>6</td>
+              <td>images6.zip</td>
+              <td>labels6.zip</td>
+              <td>14GB</td>
+              <td>7</td>
+              <td>images7.zip</td>
+              <td>labels7.zip</td>
+              <td>16GB</td>
+          </tr>
+          <tr>
+              <td>8</td>
+              <td>images8.zip</td>
+              <td>labels8.zip</td>
+              <td>21GB</td>
+              <td>9</td>
+              <td>images9.zip</td>
+              <td>labels9.zip</td>
+              <td>11GB</td>
+          </tr>
+          <tr>
+              <td>10</td>
+              <td>images10.zip</td>
+              <td>---------</td>
+              <td>16GB</td>
+              <td>11</td>
+              <td>images11.zip</td>
+              <td>---------</td>
+              <td>15GB</td>
+          </tr>
+      </tbody>
+      </table>
+
+    <h2>
+      <a id="gallery" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true"
+          class="octicon octicon-link"></span></a>Gallery
+    </h2>
+    <p style="text-align: justify;text-indent: 2ch;">
+      To provide you an intuitive impression of AirBirds, a gallery that consists of 64 random samples is presented. 
+      Samples exhibited here are only a small portion 
+      of 118,312 images and we hope they open a window of exploring this challenging and scenario-diverse dataset for the research of bird
+      strike prevention.
+    </p>
+    <p align="center"><img src="images/gallery.jpg" height="450" width="830" />
+    </p>
+
+    <h2>
+      <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true"
+          class="octicon octicon-link"></span></a>License
+    </h2>
+    <p>AirBirds is free of use for researchers. Researchers can share and adapt this dataset under the license 
+        Attribution-NonCommercial-ShareAlike 4.0 International 
+      (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>).
+    </p>
+
+    <footer class="site-footer" align="center">
+      <span class="site-footer-owner">This website is maintained by <a
+          href="https://airbirdsdata.github.io/">AirBirds Team</a>.</span>
+    </footer>
+  </section>
+</body>
+
+</html>
